@@ -38,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	letter-spacing: 3px;
 }
 
 ol, ul {
@@ -46,8 +47,12 @@ ol, ul {
 
 .banner{
 	height: 100%;
-	display: flex;
 	align-items: center;
+}
+
+.auto-type {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 p .auto-type {
