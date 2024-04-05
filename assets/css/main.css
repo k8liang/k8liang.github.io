@@ -1896,7 +1896,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 30px 0;
 		padding-left: 1em;
 	}
 
@@ -2959,7 +2959,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding: 4em 0 0.1em 0 ;
+				padding: 2em 1em 1em 1em ;
+				
 			}
 
 				#header nav {
@@ -2971,6 +2972,11 @@ input, select, textarea {
 /*						background-size: 1.5em 1.5em;*/
 						height: 22px;
 					}
+			
+			body #main .inner {
+				padding-left: 2em;
+				padding-right: 2em;
+			}
 
 		}
 
@@ -3280,7 +3286,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#footer {
-				padding: 3em 0 1em 0 ;
+				padding: 3em 2em 1em 2em ;
 			}
 
 				#footer > .inner {
