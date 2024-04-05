@@ -1896,7 +1896,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 30px 0;
+		margin: 0 0 60px 0;
 		padding-left: 1em;
 	}
 
@@ -2612,7 +2612,7 @@ input, select, textarea {
 				position: relative;
 				display: block;
 				width: 100%;
-				border-radius: 4px;
+				border-radius: 8px;
 				overflow: hidden;
 			}
 
@@ -2686,13 +2686,14 @@ input, select, textarea {
 				left: 0;
 				width: 100%;
 				height: 100%;
-				padding: 1em;
+				padding: 2em;
 				border-radius: 4px;
 				border-bottom: 0;
 				color: #F4F4F7;
 				text-align: center;
 				text-decoration: none;
 				z-index: 3;
+				font-size: 16px;
 			}
 
 				.tiles article > a > :last-child {
@@ -2740,10 +2741,10 @@ input, select, textarea {
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
-				-moz-transform: scale(0.95);
-				-webkit-transform: scale(0.95);
-				-ms-transform: scale(0.95);
-				transform: scale(0.95);
+				-moz-transform: scale(0.98);
+				-webkit-transform: scale(0.98);
+				-ms-transform: scale(0.98);
+				transform: scale(0.98);
 			}
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
@@ -3033,6 +3034,7 @@ input, select, textarea {
 				list-style: none;
 				margin: 0 0 1em 0;
 				padding: 0;
+				font-size: 18px;
 			}
 
 				#menu > .inner > ul > li {
@@ -3069,7 +3071,8 @@ input, select, textarea {
 			left: -6em;
 			width: 6em;
 			text-indent: 6em;
-			height: 3em;
+			height: 22px;
+			width: 22px;
 			border: 0;
 			font-size: 1em;
 			opacity: 0;
