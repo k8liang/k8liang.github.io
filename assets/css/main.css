@@ -1866,6 +1866,9 @@ input, select, textarea {
 			text-align: center;
 			line-height: 2.65em;
 			color: inherit;
+			margin-right: 0px;
+			padding-right: 0px;
+			padding-left: 4px;
 		}
 
 			.icon.style2:before {
