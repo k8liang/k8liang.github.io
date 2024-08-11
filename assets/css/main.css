@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 }
 
 ol, ul {
@@ -49,7 +49,7 @@ ol, ul {
 }
 
 p .auto-type {
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 }
 
 blockquote, q {
