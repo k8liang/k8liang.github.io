@@ -114,7 +114,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #C5D2E3;
+		background: #dbd8d3;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -131,7 +131,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #465263;
+		color: #785224;
 		font-family: "Questrial", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
@@ -1858,7 +1858,7 @@ input, select, textarea {
 			-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 			background-color: transparent;
-			border: solid 1px #909cad;
+			border: solid 1px #ccae7e;
 			border-radius: 4px;
 			width: 2.65em;
 			height: 2.65em;
@@ -1876,13 +1876,13 @@ input, select, textarea {
 			}
 
 			.icon.style2:hover {
-				color: #A0B9E8 !important; 
-				border-color: #A0B9E8;
+				color: #ccae7e !important; 
+				border-color: #ccae7e;
 			}
 
 			.icon.style2:active {
-				background-color: rgba(160, 185, 232, 0.1);
-				color: #A0B9E8;
+				background-color: rgba(204, 174, 126, 0.1);
+				color: #ccae7e;
 			}
 
 /* List */
@@ -2728,7 +2728,7 @@ input, select, textarea {
 					}
 
 			.tiles article.style1 > .image:before {
-				background-color: #A0B9E8;
+				background-color: #ccae7e;
 			}
 
 			.tiles article.style2 > .image:before {
@@ -2922,7 +2922,7 @@ input, select, textarea {
 						overflow: hidden;
 						padding: 0;
 						white-space: nowrap;
-						background-color: #C5D2E3;
+						background-color: #dbd8d3;
 					}
 
 						#header nav ul li a[href="#menu"]:before, #header nav ul li a[href="#menu"]:after {
@@ -3010,7 +3010,7 @@ input, select, textarea {
 		max-width: 80%;
 		height: 100%;
 		-webkit-overflow-scrolling: touch;
-		background: #585858;
+		background: #785224;
 		color: #ffffff;
 		cursor: default;
 		visibility: hidden;
@@ -3191,7 +3191,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 5em 0 6em 0 ;
-		background-color: #C1CCDB;
+		background-color: #d9d3ca;
 	}
 
 		#footer > .inner {
@@ -3210,11 +3210,11 @@ input, select, textarea {
 		}
 
 #footer .inner li {
-	color: #909cad;
+	color: #ccae7e;
 }
 
 #footer .inner li a{
-	color: #465263;
+	color: #8f7243;
 }
 
 			#footer > .inner > * > :last-child {
@@ -3245,7 +3245,7 @@ input, select, textarea {
 
 				#footer > .inner .copyright li {
 					display: inline-block;
-					border-left: solid 1px #909cad;
+					border-left: solid 1px #ccae7e;
 					line-height: 1;
 					padding: 0 0 0 1em;
 					margin: 0 0 0 1em;
