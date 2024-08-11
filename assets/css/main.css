@@ -2622,6 +2622,7 @@ input, select, textarea {
 				.tiles article > .image img {
 					display: block;
 					width: 100%;
+					filter: blur(5px);
 				}
 
 				.tiles article > .image:before {
@@ -3214,7 +3215,7 @@ input, select, textarea {
 }
 
 #footer .inner li a{
-	color: #8f7243;
+	color: #452423;
 }
 
 			#footer > .inner > * > :last-child {
