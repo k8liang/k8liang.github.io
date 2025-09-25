@@ -1,0 +1,134 @@
+:root {
+  --icon-size: 200px;
+  --folder-w: 120px;
+  --folder-h: 90px;
+  --card-w: 80px;
+  --card-h: 70px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  font-family: system-ui, sans-serif;
+}
+
+.folder-container {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.folder {
+  width: var(--folder-w);
+  height: var(--folder-h);
+  position: relative;
+  transform-style: preserve-3d;
+  margin-bottom: 12px;
+}
+
+/* panels */
+.folder-back {
+  position: absolute;
+  inset: 0;
+  background: #e2e2e2;
+  border-radius: 12px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+.folder-tab {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 50%;
+  height: 22px;
+  background: #e2e2e2;
+  border-radius: 12px 12px 0 0;
+  z-index: 0;
+  clip-path: polygon(0% 0%, 70% 0%, 90% 100%, 0% 100%);
+}
+.folder-front {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background: rgba(245, 245, 245, 0.95);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  z-index: 3;
+  transform-origin: bottom center;
+  transform: rotateX(0deg) translateY(0);
+  transition: transform 500ms cubic-bezier(.2,.9,.2,1);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+/* stack */
+.folder-inner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* cards */
+.card {
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  width: var(--card-w);
+  height: var(--card-h);
+  border-radius: 8px;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  overflow: hidden;
+  transition: transform 600ms cubic-bezier(.2,.9,.2,1),
+              box-shadow 300ms ease;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* closed state — stacked */
+.card {
+  transform: translateX(-50%) translateY(0) rotate(var(--closed-rot, 0deg)) scale(0.9);
+}
+
+/* hover open — use randomized vars */
+.folder-container:hover .folder-front {
+  transform: rotateX(-45deg) translateY(8px);
+}
+.folder-container:hover .card {
+  transform: translateX(calc(-50% + var(--spread-x, 0px)))
+             translateY(var(--lift-y, -50px))
+             rotate(var(--rot, 0deg))
+             scale(1.12);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.22);
+}
+.folder-container:hover .card:nth-child(1) { transition-delay: 0.1s; }
+.folder-container:hover .card:nth-child(2) { transition-delay: 0.2s; }
+.folder-container:hover .card:nth-child(3) { transition-delay: 0.3s; }
+
+/* label */
+.label {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: #444;
+  background: transparent;
+  transition: background 200ms ease, color 200ms ease;
+}
+.folder-container:hover .label {
+  background: #1579ff;
+  color: #fff;
+}
