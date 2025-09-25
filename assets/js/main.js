@@ -1,8 +1,3 @@
-/*
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 (function($) {
 
@@ -182,4 +177,39 @@
 
 			});
 
-})(jQuery);
+});
+
+function randomizeCards() {
+  cards.forEach((card, i) => {
+    // spread direction (-1, 0, +1 based on index)
+    let dir = (i%3) - 1;
+
+    // random horizontal spread based on card width
+    let spread = dir * (0.8 + Math.random() * 0.15) *
+                 parseInt(getComputedStyle(card).getPropertyValue('--card-w'));
+	// let spread = 0;
+
+    // random vertical lift based on card height
+    let lift = -(0.8 + Math.random() * 0.1) *
+               parseInt(getComputedStyle(card).getPropertyValue('--card-h'));
+
+    // random rotation ± degrees
+    let rot = dir * (6 + Math.random() * 6);
+
+    // closed stack: small random tilt so it looks natural
+    let closedRot = (Math.random() * 4 - 2) + 'deg';
+
+    card.style.setProperty('--spread-x', spread + 'px');
+    card.style.setProperty('--lift-y', lift + 'px');
+    card.style.setProperty('--rot', rot + 'deg');
+    card.style.setProperty('--closed-rot', closedRot);
+  });
+}
+
+const folder = document.querySelector('.folder-container');
+const cards = document.querySelectorAll('.card');
+// run randomization every time you hover
+folder.addEventListener('mouseenter', randomizeCards);
+
+// also set initial positions once
+randomizeCards();
