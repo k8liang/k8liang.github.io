@@ -1,3 +1,6 @@
 RewriteEngine On
 RewriteCond %{THE_REQUEST} ^.*/index\.html
 RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^.*/designs\.html
+RewriteRule ^(.*)designs\.html$ /$1 [R=301,L]
