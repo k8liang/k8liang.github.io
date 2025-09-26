@@ -213,3 +213,20 @@ folder.addEventListener('mouseenter', randomizeCards);
 
 // also set initial positions once
 randomizeCards();
+
+
+////
+document.querySelectorAll('.folder-container').forEach(folder => {
+  const tooltip = folder.querySelector('.tooltiptext');
+
+  folder.addEventListener('mousemove', (e) => {
+    const rect = folder.getBoundingClientRect();   // folder box
+    const x = e.clientX - rect.left;               // mouse X inside folder
+    const y = e.clientY - rect.top;                // mouse Y inside folder
+
+    tooltip.style.left = x + 10 + 'px';  // offset so not on top of cursor
+    tooltip.style.top  = y + 10 + 'px';
+  });
+});
+
+
