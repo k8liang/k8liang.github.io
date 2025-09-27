@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Apple Garamond Light';
+    src: url('assets/typefaces/apple_garamond/AppleGaramond-Light.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Optional: controls how font loads */
+}
+
 :root {
   --icon-size: 200px;
   --folder-w: 110px;
@@ -22,7 +30,7 @@ html, body {
   	max-width: 900px;
   	margin: 0 auto;
   	padding: 2rem;
-	padding-top: 60px;
+	padding-top: 100px;
 	padding-bottom: 100px
 }
 
@@ -35,20 +43,31 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	gap: 40px;
+	gap: 30px;
+	align-items: flex-start;
+	margin-bottom: 12px;
+}
+
+#home-banner {
 	align-items: center;
-	margin-bottom: 40px
 }
 
 h1{
-	font-size: min(2.5vw, 40px);
+	font-family: 'Apple Garamond Light', serif;
+	font-size: 2.5rem;
+	box-shadow: 0 6px 6px rgba(0,0,0,0.02);
+}
+
+h2 .auto-type {
+	margin-top: 8px;
+	font-weight: normal;
 }
 
 p {
 	line-height: 24px;
 }
 
-#banner-images{
+#home-banner-images{
 	display: flex;
 	flex-direction: row;
 	justify-content: right;
@@ -58,32 +77,16 @@ p {
 	cursor: pointer;
 }
 
-#b-img-5{
-	height: 120px;
+#home-banner-images #b-yakult-img{
+	height: 130px;
 	z-index: 3;
 	position: relative;
 	bottom: -30px;
 	right: -70px;
-	transform: rotate(-8deg)
+	transform: rotate(-10deg)
 }
 
-/* #b-img-4{
-	height: 110px;
-	z-index: 0;
-	position: relative;
-	bottom: 30px;
-	right: -200px;
-}
-
-#b-img-3{
-	height: 100px;
-	z-index: 2;
-	position: relative;
-	bottom: -50px;
-	right: -120px;
-} */
-
-#b-img-1{
+#home-banner-images #b-chasiu-piece-img{
 	height: 110px;
 	z-index: 2;
 	position: relative;
@@ -91,12 +94,66 @@ p {
 	right: 0px;
 }
 
-#b-img-2{
+#home-banner-images #b-bowl-img{
 	height: 180px;
 	z-index: 1;
 	position: relative;
 	bottom: 0px;
 	left: 40px;
+}
+
+#aboutme-banner-images{
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	align-items: center;
+	gap: -20px;
+	width: auto;
+	cursor: pointer;
+}
+
+#aboutme-banner-images #b-taiyaki-img{
+	height: 150px;
+	z-index: 3;
+	position: relative;
+	bottom: -70px;
+	right: -100px;
+	transform: rotate(-20deg)
+}
+
+#aboutme-banner-images #b-milk-img{
+	transform: rotate(-12deg);
+	height: 120px;
+	z-index: 2;
+	position: relative;
+	bottom: 50px;
+	right: 20px;
+}
+
+#aboutme-banner-images #me-main-img{
+	width: 270px;
+	height: 270px;
+	z-index: 2;
+	position: relative;
+	bottom: 0px;
+	left: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: bottom;
+}
+
+#me {
+	position: relative;
+}
+
+#me-frame-img-top {
+	width: 340px;
+	height: 340px;
+	z-index: 1;
+	position: absolute;
+	bottom: -30px;
+	left: 4px;
+	object-fit: cover;
 }
 
 #main {
@@ -126,8 +183,7 @@ p {
  	position: relative;
   	transform-style: preserve-3d;
   	margin-bottom: 12px;
-		margin-top: calc(var(--card-h) * 1.12 - var(--folder-h) * 0.5 + 10px);
-
+	margin-top: calc(var(--card-h) * 1.12 - var(--folder-h) * 0.4 + 0px);
 }
 
 /* panels */
@@ -252,19 +308,43 @@ img {
   	transition: transform 300ms ease;
 }
 
-#b-img-1:hover {
+#home-banner-images #b-chasiu-piece-img:hover {
   transform: scale(1.05)
   			rotate(5deg);
   transition: transform 300ms ease;
 }
 
-#b-img-5:hover {
+#home-banner-images #b-yakult-img:hover {
   transform: scale(1.05)
-  			rotate(-18deg);
+  			rotate(-20deg);
   transition: transform 300ms ease;
 }
 
-#b-img-2:hover {
+#home-banner-images #b-bowl-img:hover {
+  transform: scale(1.05)
+  			rotate(-5deg);
+  transition: transform 300ms ease;
+}
+
+#aboutme-banner-images #b-milk-img:hover {
+  transform: scale(1.05)
+  			rotate(-2deg);
+  transition: transform 300ms ease;
+}
+
+#aboutme-banner-images #b-taiyaki-img:hover {
+  transform: scale(1.05)
+  			rotate(-30deg);
+  transition: transform 300ms ease;
+}
+
+#aboutme-banner-images #me-main-img:hover {
+  transform: scale(1.05)
+  			rotate(5deg);
+  transition: transform 300ms ease;
+}
+
+#aboutme-banner-images #me-frame-img-top:hover {
   transform: scale(1.05)
   			rotate(-5deg);
   transition: transform 300ms ease;
@@ -353,7 +433,7 @@ h2 {
 .tile {
 	display: inline-block;
 	margin: min(-1vw, -14px);
-	transition: transform 300ms ease;
+	transition: transform 100ms ease;
 	position: relative;   /* needed for z-index */
   	z-index: 1;   
 	width: auto;
@@ -363,7 +443,7 @@ h2 {
 	width: min(12vw, 150px);
 	height: min(12vw, 150px);
 	transform: rotate(var(--tile-closed-rot, 0deg));
-	transition: transform 600ms ease;
+	transition: transform 400ms ease;
 	object-fit: cover;
 	z-index: 1;
 	position: relative;
